@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linked Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="sigma.parsers.json.min.js"></script>
+    <script src="sigma.renderers.edgeLabels.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        });
+    </script>
+
+
+    <script>
+        sigma.parsers.json('data2.json', {
+            container: 'container4',
+            settings: {
+                defaultNodeColor: '#ec5148'
+            }
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="container2">
+            <div id="particles-js">
+
+                <h1 class="animated fadeInLeft centered"> Linked Data </h1>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="whatLinked.html">Wat is Linked Data</a> </li>
+            <li><a href="geoVSLinked.html">Geoinformatie en Linked Data</a></li>
+            <li><a href="benefits.html">Voordelen van Linked Data</a></li>
+            <li>Technologiën in Linked Data</li>
+
+            <ul class="Technologiën in Linked Data">
+                <li> <a href="concept.html">RDF</a></li>
+                <li><a href="SPARQL.html">SPARQL</a></li>
+                <li><a href="vocabularies.html">Vocabularies</a></li>
+            </ul>
+            <li><a href="Adoption.html">De adoptie van Linked Data</a></li>
+            <li><a href="referenties.html">Referenties</a></li>
+            <li><a href="webmapInfo.html">Informatie over de webmap applicatie</a></li>
+            <li><a href="webmap.html">Webmap applicatie</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="containerOwn">
+
+        <div class="main">
+            <h1>Vocabularies</h1>
+            <p>
+                Terwijl we in de sectie <a href="SPARQL.html">SPARQL</a> in de video een sparql query hebben bevraagd
+                ter illustratie om te laten zien hoe een sparql query basaal is opgebouwd, is het echter ook belangrijk
+                om bewust te zijn van de volgende concepten: namelijk vocabularies en ontologies.
+            </p>
+            <div class="important">
+                <img src="lamp.png" class="icon">
+                <label>Klik op mij!</label>
+                <p>Namelijk om een sparql query te kunnen bevragen moet men bewust zijn van de volgende vragen:</p>
+                <ul>
+                    <li><strong>Welke objecten kunnen worden bevraagd in een sparql query? <sup>2</sup></strong></li>
+                    <li><strong>Hoe verhouden de objecten zich ten opzichte van elkaar?<sup>2</sup></strong></li>
+                </ul>
+
+            </div>
+            <p></p>
+
+
+            <p> Dit soort informatie wordt vastgesteld in zogenaamde vocabulaires/ontologies. Het verschil tussen
+                ontologies/vocabularies is me nog niet helemaal duidelijk. Vanuit literatuur had ik begrepen dat een
+                vocabulaire
+                een overzicht geeft van de toegestande <strong>klasses</strong> en <strong>eigenschappen</strong>
+                <sup>1</sup>.
+                Een voorbeeld hiervan kan worden
+                gevonden op de volgende pagina, waarbij een overzicht wordt gegeven over de toegestane klasses en
+                eigenschappen bij BRT
+                Linked Data van het Kadaster:<a href="https://brt.basisregistraties.overheid.nl/def/top10nl"
+                    target="_blank">
+                    https://brt.basisregistraties.overheid.nl/def/top10nl</a> .
+
+                Op deze link kan je dus vinden welke klasses en eigenschappen van BRT linked Data mogelijk zijn om te
+                kunnen
+                bevragen in een sparql query.</p>
+            <p></p>
+
+
+            <p> Volgens mail contact met Simon Scheider, die werkzaam is bij de department 'Human Geography and Spatial
+                Planning'
+                van de universiteit van Utrecht, kunnen vocabularies als soort van ontologies worden beschouwd, maar dan
+                niet helemaal.
+                Bij vocabularies gaat het alleen om de <strong>termen</strong>, terwijl bij het gebruik van ontologies
+                ook beperkingen
+                door <strong>logica</strong> is inbegrepen.
+                Simon Scheider kaartte een mooi voorbeeld aan: </p>
+
+            <div class="important">
+                <p> Bijvoorbeeld alle filosofen zijn mensen → mensen zijn dieren → dus filosofen
+                    zijn eveneens dieren </p>
+
+            </div>
+
+            <p>Dit soort logica is dus inbegrepen in ontologies en niet noodzakelijk in vocabularies</p>
+
+
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

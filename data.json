@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "n0",
+      "label": "Joy",
+      "x": 0,
+      "y": 0,
+      "size": 2
+    },
+    {
+      "id": "n1",
+      "label": "Esri",
+      "x": 3,
+      "y": 1,
+      "size": 2
+    },
+    {
+      "id": "n2",
+      "label": "Wageningen University",
+      "x": 1,
+      "y": 3,
+      "size": 2
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "n0",
+      "label": "is doing an internship at",
+      "target": "n1"
+    },
+    {
+      "id": "e1",
+      "source": "n1",
+      "label": "is affiliated with",
+      "target": "n2"
+    },
+    {
+      "id": "e2",
+      "source": "n0",
+      "label": "is studying at",
+      "target": "n2"
+    }
+  ]
+}

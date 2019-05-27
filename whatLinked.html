@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linked Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="sigma.parsers.json.min.js"></script>
+    <script src="sigma.renderers.edgeLabels.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        });
+    </script>
+
+
+    <script>
+        sigma.parsers.json('data2.json', {
+            container: 'container4',
+            settings: {
+                defaultNodeColor: '#ec5148'
+            }
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="container2">
+            <div id="particles-js">
+
+                <h1 class="animated fadeInLeft centered"> Linked Data </h1>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="whatLinked.html">Wat is Linked Data</a> </li>
+            <li><a href="geoVSLinked.html">Geoinformatie en Linked Data</a></li>
+            <li><a href="benefits.html">Voordelen van Linked Data</a></li>
+            <li>Technologiën in Linked Data</li>
+
+            <ul class="Technologiën in Linked Data">
+                <li> <a href="concept.html">RDF</a></li>
+                <li><a href="SPARQL.html">SPARQL</a></li>
+                <li><a href="vocabularies.html">Vocabularies</a></li>
+            </ul>
+            <li><a href="Adoption.html">De adoptie van Linked Data</a></li>
+            <li><a href="referenties.html">Referenties</a></li>
+            <li><a href="webmapInfo.html">Informatie over de webmap applicatie</a></li>
+            <li><a href="webmap.html">Webmap applicatie</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="containerOwn">
+
+        <div class="main">
+            <h1>Wat is Linked Data</h1>
+            <h3>Algemeen</h3>
+            <p> In de huidige tijd is veel data beschikbaar. Veel van deze data kent een geografisch component en kan
+                eventueel voor anderen, naast de Geoinformatie experts, eventueel interessant zijn. Bijvoorbeeld voor
+                het implementeren in een webapplicatie. Echter in de wereld van Geoinformatie, kent veel geografische
+                data een gestandaardiseerde formaat dat het delen met anderen bemoeilijkt. Er is dus noodzaak voor een
+                model/infrastructuur dat het makkelijker maakt om deze data op grote schaal te kunnen
+                delen/hergebruiken. Linked Data kan uitkomst bieden om als zo een infrastructuur te dienen. Meer over de
+                technologie Linked Data wordt in de volgende secties nader toegelicht.
+            </p>
+            <h3>Data management geschiedenis</h3>
+            <p>
+                Voor een aantal decennia hebben traditioniële databases een grote rol gespeeld in het beheren,bewaren en
+                het bevragen van data <sup>1</sup>. Men bewaart informatie bij relationiele databases in tabellen, waarbij men
+                meestal informatie over verschillende tabellen verspreidt. Om een bepaalde bevraging te doen, waarbij de
+                informatie over verschillende tabellen verspreid zijn, wordt er gebruik gemaakt van een zogenaamde join.
+                Een join operatie wordt over het algemeen als een dure operatie beschouwd.
+
+                Echter in de huidige tijd, waarbij de eigenschappen van de hardware <sup>2</sup> verbeterd zijn t.o.v. een aantal
+                decennia terug en verder meer noodzaak is voor schaalbaarheid en performance door de opkomst van de
+                zogenaamde big-data systemen, is het eventueel van belang om een andere database-systeem in acht te
+                nemen. Men kan daarbij aan de NoSQL databases denken wat verder verduidelijkt wordt in de volgende
+                sectie.
+            </p>
+            <h3>NOSQL database</h3>
+            <p> De No-SQL databases zijn opgekomen die verschillen in de manier waarop informatie wordt bewaard en
+                bevraagd t.o.v de relationiele databases <sup>1</sup>. Binnen de No-SQL databases zijn de volgende vier databases
+                veel voorkomend <sup>1</sup>:
+            </p>
+            <ul>
+                <li>graph database</li>
+                <li>key-value database</li>
+                <li>document database</li>
+                <li>column family database</li>
+            </ul>
+
+            <figure>
+                    <img src="noSQL.png" id="noSQL">
+                    <figcaption><i>Grotendeels gebaseerd op het diagram van</i> <a href="https://neo4j.com/blog/why-nosql-databases/"
+                        target="_blank">
+                        Neo4j</a></figcaption>
+                  </figure>
+           
+            <p>
+                Linked Data valt onder een 'graph database' en zal in de volgende secties nader toegelicht worden. De
+                andere 3 databases zullen niet ter sprake komen.
+
+                Bij een graph database ligt de nadruk om het modelleren van netwerken <sup>3</sup>. Zo een netwerk bestaan uit
+                'vertices' en 'edges'. Vertices betreffen de objecten in het netwerk, waarbij edges de relatie aangeven
+                tussen de objecten. Zie de afbeelding hieronder voor een simpele weergave van een verbinding tussen twee
+                nodes door middel van een edge.
+            </p>
+
+            <div id="container4"></div>
+            <p> Binnen de graph databases kan er weer onderscheid gemaakt tussen
+                verschillende modellen <sup>4</sup>.</p>
+
+
+            <ul>
+                <li>hypergraphs</li>
+                <li>property graph</li>
+                <li>Resource Description Framework (RDF) graph</li>
+            </ul>
+            <p>
+                Linked Data maakt gebruik van het <a href="concept.html">RDF</a> model en nog andere technologiën.
+            </p>
+
+
+
+
+            <h3>Het Semantische Web</h3>
+            <p> De relatie tussen het Semantische Web en Linked Data is niet eenduidig. Sommigen beschouwen Linked Data
+                als een losstaand technologie, waarbij anderen Linked beschouwen als een extensie van het Semantische
+                Web en weer anderen beschouwen Linked Data als het Semantische web, maar dan goed uitgevoerd. Hoewel
+                voor het gemak beschouw ik Linked Data als een extensie van het Semantische web, aangezien Linked veel
+                van de achterliggende technologie van het Semantische Web gebruikt.
+
+
+
+                Om te beginnen, zal ik eerst het doel van het Semantische Web toelichten. Het Semantische Web heeft als
+                doel om de betekenis van data <strong>machine-vriendelijk</strong> <sup>5</sup> te maken. Dit zou ervoor moeten
+                zorgen dat
+                zoekopdrachten beter de data zou moeten kunnen representeren. Sinds een computer niet zelf de betekenis
+                van data kan achterhalen, is het daarom noodzakelijk om een gestructueerde formaat aan de data mee te
+                geven, wat informatie betreft over wat de data inhoudt <sup>5</sup>. Het probleem kan bijvoorbeeld wezen, dat een
+                woord op meerdere manieren kan worden opgevat. Daarom is het meegeven van zo'n gestructureerde formaat
+                noodzakelijk.
+            </p>
+
+            <h4>Hoe kan Linked Data worden beschreven?</h4>
+            <div class="important"> 
+                    <img src="lamp.png" class="icon">
+                    <label>Klik op mij!</label>
+                    <p> Linked Data kan worden beschouwd als een technologie wat als doel heeft om data in een
+                            bepaalde
+                            <strong>formaat</strong> te structureren (RDF), zodat deze data met elkaar <strong>gelinkt</strong> kunnen worden.
+                    Dit zou ervoor
+                    moeten
+                    zorgen dat Semantische bevragingen beter gesteld kunnen worden <sup>6</sup>.
+                </p>
+            </div>
+
+
+            <p></p>
+            <p>
+                Aangezien, men geïnteresseerd is in toepassingen van Linked Data op het gebied van Geoinformatie, wordt
+                in de volgende <a href="geoVSLinked.html">sectie</a> nadrukkelijk iets verteld over de verschillen tussen het Semantische Web en
+                Geoinformatie.</p>
+
+                
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

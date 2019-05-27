@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linked Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="sigma.parsers.json.min.js"></script>
+    <script src="sigma.renderers.edgeLabels.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        });
+    </script>
+
+
+    <script>
+        sigma.parsers.json('data2.json', {
+            container: 'container4',
+            settings: {
+                defaultNodeColor: '#ec5148'
+            }
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="container2">
+            <div id="particles-js">
+
+                <h1 class="animated fadeInLeft centered"> Linked Data </h1>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="whatLinked.html">Wat is Linked Data</a> </li>
+            <li><a href="geoVSLinked.html">Geoinformatie en Linked Data</a></li>
+            <li><a href="benefits.html">Voordelen van Linked Data</a></li>
+            <li>Technologiën in Linked Data</li>
+
+            <ul class="Technologiën in Linked Data">
+                <li> <a href="concept.html">RDF</a></li>
+                <li><a href="SPARQL.html">SPARQL</a></li>
+                <li><a href="vocabularies.html">Vocabularies</a></li>
+            </ul>
+            <li><a href="Adoption.html">De adoptie van Linked Data</a></li>
+            <li><a href="referenties.html">Referenties</a></li>
+            <li><a href="webmapInfo.html">Informatie over de webmap applicatie</a></li>
+            <li><a href="webmap.html">Webmap applicatie</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="containerOwn">
+
+        <div class="main">
+            <h1>De voordelen van Linked Data</h1>
+            <div class="important">
+                <img src="lamp.png" class="icon">
+                <label>Klik op mij!</label>
+
+                <p>Gebaseerd op literatuurstudie, zijn de voornaamste voordelen van Linked Data aangekaart.</p>
+                <ul>
+                    <li><strong>Data integratie</strong></li>
+                    <li><strong>Data herbestemming</strong></li>
+                    <li><strong>Data publicatie en ontdekking</strong></li>
+                </ul>
+                <p>De voordelen zullen één voor één toegelicht worden</p>
+            </div>
+
+            <img src="benefits.png" style="margin:50px 0px">
+
+            <h3>Data publicatie en ontdekking <sup>1</sup></h3>
+
+            <p> Wanneer Data als Linked Data beschikbaar wordt gesteld, dan maakt het mogelijk om van een triple naar
+                een andere triple
+                te gaan. Wel mits de voorwaarde is voldaan, waarbij de triples met elkaar gelinkt zijn door een
+                gemeenschappelijke URI.
+            </p>
+
+            <h3>Data herbestemming <sup>1</sup></h3>
+            <p>Zoals de naam al zegt, de data voor een andere doelbestemming gebruiken dan oorspronkelijk is bedacht.
+                Dit zal ik nader toelichten aan de hand van een voorbeeld. Stel, (het voorbeeld is gebaseerd op het boek
+                van
+                Glen Hart ) we hebben informatie over sluizen en stuwen. Aanvankelijk kunnen deze informatie worden
+                verzameld met als doel om de sluizen en stuwen te documenteren. Maar stel dat we deze informatie zouden
+                willen
+                gebruiken voor een andere doelbestemming: bijvoorbeeld we willen alle flood defenses opvragen (waarvan
+                stuwen en sluizen kunnen
+                worden beschouwd als een type flood defense). Via Linked Data kun je wel simpelweg de volgende triple
+                creëren. </p>
+            <ul>
+                <li>stuw 🡢 is een type 🡢 flood defense</li>
+                <li>sluis 🡢 is een type 🡢 flood defense </li>
+            </ul>
+            <p>Achteraf wordt door het proces van inferencing nieuwe triples gemaakt. Inferencing doet het op basis van
+                patronen in
+                bestaande triples. Door de bovenstaande statement is stuw een soort subklasse van flood defense
+                geworden, waardoor tengevolge alle stuwen een type flood defense
+                worden. Dit maakt het uitbreiden van het data model erg flexibel</p>
+            <h3>Data integratie <sup>1</sup></h3>
+            <p>Over het algemeen wordt in de geospatial domein gebruik gemaakt van <strong>spatial data infrastructures
+                    (SDI)</strong>
+                voor het delen van geosspatial data. In spatial data infrastructures wordt er gebruik gemaakt van
+                zogenaamde vocabularies.
+                Vocabularies bepalen welke woorden, relaties en beperkingen voor het gebruiken van de woorden binnen een
+                spatial data infrastructure kunnen worden gebruikt.
+                Delen binnen een spatial data infrastructure is alleen mogelijk wanneer men gebruik maakt van dezelfde
+                concepten <sup>2</sup>. Een probleem dat zicht voor kan doen,
+                is dat de concepten er vergelijkbaar kunnen uitzien, maar toch kunnen verschillen in de betekenis
+                <sup>2</sup>. Dit
+                kan tot problemen in data harmonizatie leiden.
+                In linked data zorgen URI's ervoor dat de betekenissen eenduidig zijn, waardoor dat het combineren van
+                datasets makkelijker maakt
+                zonder bang te zijn dat dit tot nietszeggende resultaten leidt.
+            </p>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

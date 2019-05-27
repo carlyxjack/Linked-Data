@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {
+      "id": "n0",
+      "label": "node1",
+      "x": 0,
+      "y": 0,
+      "size": 2
+    },
+    {
+      "id": "n1",
+      "label": "node2",
+      "x": 2,
+      "y": 0,
+      "size": 2
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "n0",
+      "label": "is doing an internship at",
+      "target": "n1"
+    }
+  ]
+}

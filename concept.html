@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linked Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="sigma.parsers.json.min.js"></script>
+    <script src="sigma.renderers.edgeLabels.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        });
+    </script>
+
+
+    <script>
+        sigma.parsers.json('data2.json', {
+            container: 'container4',
+            settings: {
+                defaultNodeColor: '#ec5148'
+            }
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="container2">
+            <div id="particles-js">
+
+                <h1 class="animated fadeInLeft centered"> Linked Data </h1>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="whatLinked.html">Wat is Linked Data</a> </li>
+            <li><a href="geoVSLinked.html">Geoinformatie en Linked Data</a></li>
+            <li><a href="benefits.html">Voordelen van Linked Data</a></li>
+            <li>Technologiën in Linked Data</li>
+
+            <ul class="Technologiën in Linked Data">
+                <li> <a href="concept.html">RDF</a></li>
+                <li><a href="SPARQL.html">SPARQL</a></li>
+                <li><a href="vocabularies.html">Vocabularies</a></li>
+            </ul>
+            <li><a href="Adoption.html">De adoptie van Linked Data</a></li>
+            <li><a href="referenties.html">Referenties</a></li>
+            <li><a href="webmapInfo.html">Informatie over de webmap applicatie</a></li>
+            <li><a href="webmap.html">Webmap applicatie</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="containerOwn">
+
+        <div class="main">
+            <h1>RDF</h1>
+            <h3>Algemeen</h3>
+            <p> Een voor een zullen de concepten van Linked Data nader toegelicht worden. Het is misschien handig om de
+                volgende afbeelding in
+                je achterhoofd te nemen, waarbij de verschillende technologiën en concepten als lagen kunnen worden
+                beschouwd over elkaar heen.
+                Slecht een paar van deze technologiën zullen worden toegelicht aangezien ik niet geheel in de
+                technologiën van
+                Linked Data heb kunnen verdiepen.</p>
+            <img src="linkeddata.png">
+
+
+
+            <p></p>
+            <h3>Het RDF model en de triples</h3>
+            <div class="important">
+                    <img src="lamp.png" class="icon">
+                    <label>Klik op mij!</label>
+                <p>
+                    Om te beginnen, bekijk de
+                    video hieronder voor een korte uitleg over de bouwstenen van het RDF model, de zogenaamde triples en
+                    het
+                    concept van
+                    URI. Ik was vergeten te vermelden in de video, maar <strong> URI</strong> staat voor Uniform
+                    Resource
+                    Identifier.
+                    Vergeet bij het kijken van de onderstaande video niet de link met de sectie <a
+                        href=page1v2.html>"Wat is
+                        Linked Data?"</a>, waarbij nadrukkelijk werd uitgelegd dat
+                    Linked Data een <strong>graph database</strong> is en daarbij de nadruk dus ligt op het modelleren van <strong>netwerken</strong>
+                    Dit is nadrukkelijk toegelicht in de sectie <a href="whatLinked.html">Wat is Linked Data</a>.
+                    (vertices, edges) .
+
+                </p>
+
+            </div>
+            <p></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-HuKu7US7hA" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linked Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="sigma.parsers.json.min.js"></script>
+    <script src="sigma.renderers.edgeLabels.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        });
+    </script>
+
+
+    <script>
+        sigma.parsers.json('data2.json', {
+            container: 'container4',
+            settings: {
+                defaultNodeColor: '#ec5148'
+            }
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="container2">
+            <div id="particles-js">
+
+                <h1 class="animated fadeInLeft centered"> Linked Data </h1>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="whatLinked.html">Wat is Linked Data</a> </li>
+            <li><a href="geoVSLinked.html">Geoinformatie en Linked Data</a></li>
+            <li><a href="benefits.html">Voordelen van Linked Data</a></li>
+            <li>Technologiën in Linked Data</li>
+
+            <ul class="Technologiën in Linked Data">
+                <li> <a href="concept.html">RDF</a></li>
+                <li><a href="SPARQL.html">SPARQL</a></li>
+                <li><a href="vocabularies.html">Vocabularies</a></li>
+            </ul>
+            <li><a href="Adoption.html">De adoptie van Linked Data</a></li>
+            <li><a href="referenties.html">Referenties</a></li>
+            <li><a href="webmapInfo.html">Informatie over de webmap applicatie</a></li>
+            <li><a href="webmap.html">Webmap applicatie</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="containerOwn">
+
+        <div class="main">
+            <h1>Geoinformatie vs Linked Data</h1>
+            <h3>Algemeen</h3>
+            <p> Waarbij Geoinformatie systemen zijn gebaseerd op de closed world assumption, is Linked Data gebaseerd op het 
+                idee van de open world assumption <sup>1</sup>. Hieronder een korte animatiefilmpje,waarbij kort het vershil tussen de open en closed assumption wordt
+                uitgelegd aan de hand van een voorbeeld (witte en zwarte zwanen). Zie tekst onderaan voor meer uitleg
+                wat betreft
+                de open world en de closed world assumption.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Rcc3_wX2KOk" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p></p>
+            <h3>Open World Assumption</h3>
+            <p>
+                In het Semantische Web gaat men uit van de open world assumption, wat betekent dat de waarheidsgehalte
+                van een bepaald statement losstaat van wat bekend is bij een persoon <sup>1</sup>. De dingen waar men nog niets over
+                weet, wordt beschouwd tot nu toe als onbekend wat zoals in het filmpje werd uitgelegd.
+
+                Dit is vanwege de volgende factoren <sup>1</sup>:</p>
+
+            <ol>
+                <li>De omvang van het Semantische web is groot.</li>
+                <li>Het semantische web is niet gecentraliseerd en er is geen globale data model. Het is moelijk van te
+                    voren vast te stellen hoe nieuwe informatie aan de bestaande informatie zal passen.
+                    Conflict tussen deze data is waarschijnlijk.</li>
+            </ol>
+
+
+            </p>
+            <h3>Closed World Assumption</h3>
+            <p> In geoinformatie, gaat men uit van de closed world assumption. Men gebruikt binnen de wereld van
+                geoinformatie technologieën zoals GIS en relationiele databases, waarbij alleen bepaalde attributen zijn
+                toegelaten, wat vooraf is vastgesteld in de definitie van het object <sup>1</sup>.
+
+                Dit leidt tot een verschil in het identificeren van objecten in het Semantische Web en in de
+                geoinformatie. In de geoinformatie, zijn objecten gerepresenteerd door zogenaamde Feature Identifers
+                (abstracte weergave van het object) . In het semantische web worden zogenaamde URIs gebruikt om
+                (werkelijke) objecten te representeren en kan eventuele missende data bevatten.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>

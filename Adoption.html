@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Linked Data</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.1/sigma.min.js"></script>
+    <script src="sigma.parsers.json.min.js"></script>
+    <script src="sigma.renderers.edgeLabels.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        });
+    </script>
+
+
+    <script>
+        sigma.parsers.json('data2.json', {
+            container: 'container4',
+            settings: {
+                defaultNodeColor: '#ec5148'
+            }
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="container2">
+            <div id="particles-js">
+
+                <h1 class="animated fadeInLeft centered"> Linked Data </h1>
+            </div>
+
+
+
+
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="whatLinked.html">Wat is Linked Data</a> </li>
+            <li><a href="geoVSLinked.html">Geoinformatie en Linked Data</a></li>
+            <li><a href="benefits.html">Voordelen van Linked Data</a></li>
+            <li>Technologiën in Linked Data</li>
+
+            <ul class="Technologiën in Linked Data">
+                <li> <a href="concept.html">RDF</a></li>
+                <li><a href="SPARQL.html">SPARQL</a></li>
+                <li><a href="vocabularies.html">Vocabularies</a></li>
+            </ul>
+            <li><a href="Adoption.html">De adoptie van Linked Data</a></li>
+            <li><a href="referenties.html">Referenties</a></li>
+            <li><a href="webmapInfo.html">Informatie over de webmap applicatie</a></li>
+            <li><a href="webmap.html">Webmap applicatie</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="containerOwn">
+
+        <div class="main">
+            <h1>De adoptie van Linked Data</h1>
+
+            <h3>Toepassingen van Linked Data</h2>
+                <p> Ik baseer dit voornamelijk op mijn interviews die ik heb gehad met Linked Data experts
+                    tijdens mijn stage. Ik baseer dit niet dus op literatuur en daarom moeten mensen deze uitspraken
+                    eventueel voorzichtig aannemen en eventueel zelf op onderzoek uitgaan. In ieder geval op basis van
+                    interviews met een paar
+                    Linked Data experts, kwam ik voornamelijk op de volgende toepassingen uit van Linked Data:
+
+                </p>
+                <ul>
+                    <li>Het vinden van informatie</li>
+                    <li>Het ontdekken van nieuwe informatie</li>
+                    <li>Het verhelpen van semantisch conflict</li>
+                </ul>
+
+                <h3>Uitdagingen van Linked Data</h2>
+
+                    <p>Voor de mensen die eventueel geïnterseerd zijn in de adoptie van Linked Data, men zou eventueel
+                        bepaalde uitdagingen in acht moeten nemen. Terwijl ik zelf niet veel heb verdiept in de
+                        uitdagingen van Linked Data ,
+                        stuitte ik op een paar uitdagingen die ik heb gevonden in  literatuur.
+                        <strong><i>Dit zijn slechts de bevindingen van het lezen van een paar artikelen en hoeft
+                                dus niet de gehele status quo van de uitdagingen van de adoptie van Linked Data te
+                                beschrijven.</i></strong>
+                        Op basis van een bepaar bevindingen stuitte ik op de volgende uitdagingen <sup>1</sup>:
+
+                    </p>
+                    <ul>
+                        <li>Technische uitdagingen</li>
+                        <li>Uitdagingen betreft mentaliteit</li>
+                    </ul>
+                    <p>De uitdagingen zal ik kort toelichten</p>
+
+                    <h3>Technische uitdagingen</h3>
+                    <p>Voor de transformatie van traditional data formaten naar Linked Data, heeft men waarschijnlijk
+                        een technische expert nodig <sup>1</sup>, aagezien:
+                    </p>
+                    <ul>
+                        <li>Veel programma's voor de transformatie van relationiele data naar Linked Data hebben
+                            geen Graphical User Interface (GUI) maar maken gebruik van een command line of webservices <sup>1</sup>
+                        </li>
+                        <li>Verder is er voor de transformatie van relationiele data naar Linked data, een transformatie
+                            mapping nodig. Deze moet gedefiniëerd worden en verder moet deze transformatie mapping
+                            waarschijnlijk aangepast worden per situatie. Wanneer men van verschillende data formaten
+                            naar Linked Data zou willen transformeren, dan moet men daar waarschijnlijk verschillende
+                            tools
+                            voor gebruiken <sup>1</sup>.
+                        </li>
+                    </ul>
+                    <p>Een ander belangrijk punt is eventueel de omvang van de data dat getransformeerd moet worden.
+                        Maar dit probleem is niet alleen geldend voor Linked Data en is in het algemeen voor alle
+                        databases <sup>2</sup>.</p>
+                    <h3>Uitdagingen betreft mentaliteit en regels </h3>
+                    <p>Een artikel beschreef dat in de publieke sector de adoptie van Linked Data langzamer verloopt
+                        door
+                        de volgende redenen <sup>1</sup>:
+                    </p>
+                    <ul>
+                        <li>Door bureacratie en regels voornamelijk aanwezig in de publieke sector</li>
+                        <li> Geen trainingen aanwezig om over Linked Data te onderwijzen</li>
+                    </ul>
+
+                    <h3>Eventuele tools voor de transformatie van relational data naar Linked Data</h3>
+                    <p> Een artikel beschreef een workbench die bestaat uit verschillende programma's die als doel heeft
+                        om de
+                        transformatie
+                        van relational data naar Linked Data makkelijker te maken. Voor mensen die geïnteresserd zijn
+                        in het transfomeren van relationiel data naar Linked Data, kan men eventueel een kijkje nemen
+                        op
+                        de volgende link: <a href="http://linda-project.eu/tools/"
+                            target="_blank">http://linda-project.eu/tools/</a>.
+                    </p>
+                    <p>
+                        Voor de mensen die eventueel geen relational
+                        data naar
+                        Linked data zou willen transformeren, maar in plaats daarvan on the fly Linked Data zou willen
+                        genereren.
+                        Daar is dan de volgende programma voor: ontop. Hierbij werkt het programma dus over de
+                        relational database heen en
+                        bij het stellen
+                        van een SPARQL query, wordt er 'on the fly' triples gemaakt. Meer informatie over de programma
+                        ontop
+                        kan worden gevonden op de volgende link <a href="https://ontop.inf.unibz.it/"
+                            target="blank">https://ontop.inf.unibz.it/</a> </p>
+
+
+
+        </div>
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>
